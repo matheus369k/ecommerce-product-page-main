@@ -13,12 +13,15 @@
   <link rel="stylesheet" href="./css/index.css">
 
 </head>
-<body>
+<body id="body">
   <header>
+    <div id="div">
+        
+    </div>
     <!--  adicionada ao menu para ativa-lo: class="menu" -->
-    <nav> 
+    <nav id="menu"> 
       <li>
-        <img src="./images/icon-close.svg" alt="close icon">
+        <img onclick="openMenu()" src="./images/icon-close.svg" alt="close icon">
       </li>
       <li>
         <a href="#">Collections</a>
@@ -38,20 +41,32 @@
     </nav>
     <picture>
       <div class="img-lefth">
-        <img class="burge" src="./images/icon-menu.svg" alt="menu">
+        <img onclick="openMenu()" class="burge" src="./images/icon-menu.svg" alt="menu">
         <img src="./images/logo.svg" alt="log">
       </div>
       <div class="img-rigth">
-        <img src="./images/icon-cart.svg" alt="cart">
+        <div>
+          <img src="./images/icon-cart.svg" alt="cart">
+          <span id="card" class="carrinho-off"></span>
+        </div>
         <img src="images/image-avatar.png" alt="avatar">
       </div>
     </picture>
   </header>
   <main>
     <div>
-      <img class="button-back" src="./images/icon-previous.svg" alt="back">
+      <div id="msg-comfimation" class="msg-off">
+        <h2>Carts</h2>
+        <div>
+          <img src="./images/image-product-1-thumbnail.jpg" alt="product">
+          <p class="calc">Fall Limited Edition Sneakers $125.00  X<span id="quantidade"></span> <span class="total" id="total"></span></p>
+          <img onclick="remove()" class="delete" src="./images/icon-delete.svg" alt="delete"> 
+        </div>
+        <button onclick="addCard(1)" class="button-checkout" type="submit">Checkout</button>
+      </div>
+      <img class="button-back button-B" src="./images/icon-previous.svg" alt="back">
       <img class="img-shoes" src="./images/image-product-1.jpg" alt="shoes">
-      <img class="button-next" src="./images/icon-next.svg" alt="next">
+      <img class="button-next button-N" src="./images/icon-next.svg" alt="next">
     </div>
     <serction class="information">
         <span class="name-company">Sneaker Company</span>
@@ -66,11 +81,11 @@
             <span class="number-descont">$250.00</span>
           </div>
           <div class="dado-box">
-            <img class="minus"src="./images/icon-minus.svg" alt="minus">
-            <input type="number" value="0">
-            <img class="plus"src="./images/icon-plus.svg" alt="plus">
+            <img onclick="numberProduts('minus')" class="minus"src="./images/icon-minus.svg" alt="minus">
+            <input id="number" type="number" value="1" min="0">
+            <img onclick="numberProduts('plus')" class="plus"src="./images/icon-plus.svg" alt="plus">
           </div>
-          <button type="submit">
+          <button onclick="addCard(0)" id="add-card-button" type="submit">
             <img src="./images/icon-cart-white.svg" alt="card">
             Add to cart
           </button>
@@ -83,5 +98,6 @@
         Coded by <a href="https://github.com/matheus369k">Matheus360k</a>.
       </div>
   </footer>
+  <script src="./js/index.js"></script>
 </body>
 </html>
