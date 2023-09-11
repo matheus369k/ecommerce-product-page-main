@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+}
+
+header {
+    padding: 20px;
+    min-height: 60px;
+    color: hsl(219, 9%, 45%);
+    
+}
+
+header picture{
+    display: flex;
+    flex-direction: row;
+}
+
+header picture div img{
+    height: 20px;
+}
+
+header picture .img-lefth{
+    display: flex;
+    width: 50%;
+    justify-content: left;
+    gap: 20px;
+}
+
+header picture .img-rigth{
+    display: flex;
+    width: 50%;
+    justify-content: right;
+    gap: 20px;
+}
+
+header picture div .burge{
+    cursor: pointer;
+
+}
+
+header .menu{
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    width: 75vw;
+    position: absolute;
+    gap: 20px;
+
+    background-color: white;
+}
+
+header nav{
+    display: none;
+}
+
+header .menu li a{
+    text-decoration: none;
+    color:black;
+    font-weight: bolder;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.213);
+}
+
+header .menu li{
+    margin-left: 30px;
+}
+
+header .menu li img{
+    margin: 20px 0px 30px;
+    cursor: pointer;
+}
+
+main{
+    width: 100%;
+}
+
+main .img-shoes{
+    width: 100%;
+    height: 280px;
+}
+
+main .button-back{
+    right: 90%;
+}
+
+main .button-next{
+    left: 90%;
+}
+
+main .button-back,
+main .button-next{
+    position: absolute;
+    top: 200px;
+    background-color: white;
+    width: 25px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main .button-back:hover,
+main .button-next:hover{
+    transition: .5s;
+    transform: scale(110%);
+}
+
+main .information{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main .information .name-company{
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: none;
+    text-shadow: 1px 1px hsla(26, 100%, 55%, 0.36);
+}
+
+main .information h1{
+    font-size: 1.5em;
+    letter-spacing: none;
+    font-weight: 700;
+    margin: 10px 0px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.378);
+}
+
+main .information p{
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 1px;
+    line-height: 1.8em;
+    color:hsl(219, 9%, 45%);
+}
+
+main .information .dado div{
+    display: flex;
+    flex-direction: row;
+}
+
+main .information .dado div span{
+    width: 33.3%;
+    display: flex;
+    align-items: center;
+}
+
+main .information .dado div .number-descont{
+    justify-content: right;
+    text-decoration: line-through;
+    font-size: 10px;
+    color: hsl(220, 14%, 75%);
+}
+
+main .information .dado div .porcent-descont{
+    font-size: 11px;
+    color: hsl(26, 100%, 55%);
+    font-weight: 700;
+}
+
+main .information .dado div .value-final{
+    color: hsl(0, 4%, 5%);
+    font: 700;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.378);
+    margin: 10px 0px;
+}
+
+main .information .dado .dado-box{
+    font-weight: 700;
+    font-size: 15px;
+    height: 40px;
+}
+
+main .information .dado .dado-box .minus {
+    position: absolute;
+    width: 15px;
+    padding: 2px;
+    margin-top: 18px;
+    left:10%;
+    cursor: pointer;
+}
+
+main .information .dado .dado-box .plus{
+    position: absolute;
+    width: 15px;
+    padding: 2px;
+    margin-top: 15px;
+    left: 85%;
+    cursor: pointer;
+}
+
+main .information .dado .dado-box .minus:hover,
+main .information .dado .dado-box .plus:hover{
+    transition: .5s;
+    transform: scale(140%);
+}
+
+main .information .dado input,
+main .information .dado button{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+main .information .dado button{
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+main .information .dado button:hover{
+    background-color: hsl(26, 99%, 60%);
+    transition: .5s;
+    transform: scale(101%);
+}
+
+main .information .dado button img{
+    width: 12px;
+    margin-right: 5px;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    background-color: #2222225d;
+    text-align: center;
+    font-size: 10px;
+}
+
+footer div a{
+    text-decoration: none;
+    color: hsl(26, 100%, 55%);
+    text-align: justify;
+}
