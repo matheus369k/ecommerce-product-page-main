@@ -7,7 +7,9 @@
     list-style: none;
 }
 
+html,
 body{
+    width: 94.9vw;
     height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
@@ -82,6 +84,7 @@ header .menu li img{
 
 main{
     width: 100%;
+    padding-bottom: 20px;
 }
 
 main .img-shoes{
@@ -124,14 +127,14 @@ main .information{
 main .information .name-company{
     color: hsl(26, 100%, 55%);
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: none;
     text-shadow: 1px 1px hsla(26, 100%, 55%, 0.36);
 }
 
 main .information h1{
-    font-size: 1.5em;
+    font-size: 1.8em;
     letter-spacing: none;
     font-weight: 700;
     margin: 10px 0px;
@@ -140,7 +143,7 @@ main .information h1{
 
 main .information p{
     font-weight: 400;
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 1px;
     line-height: 1.8em;
     color:hsl(219, 9%, 45%);
@@ -160,12 +163,12 @@ main .information .dado div span{
 main .information .dado div .number-descont{
     justify-content: right;
     text-decoration: line-through;
-    font-size: 10px;
+    font-size: 13px;
     color: hsl(220, 14%, 75%);
 }
 
 main .information .dado div .porcent-descont{
-    font-size: 11px;
+    font-size: 14px;
     color: hsl(26, 100%, 55%);
     font-weight: 700;
 }
@@ -179,7 +182,7 @@ main .information .dado div .value-final{
 
 main .information .dado .dado-box{
     font-weight: 700;
-    font-size: 15px;
+    font-size: 18px;
     height: 40px;
 }
 
@@ -210,7 +213,7 @@ main .information .dado .dado-box .plus:hover{
 main .information .dado input,
 main .information .dado button{
     width: 100%;
-    height: 40px;
+    height: 12vw;
     border-radius: 10px;
     border: none;
     text-align: center;
@@ -223,7 +226,7 @@ main .information .dado button{
     font-weight: 700;
     text-align: center;
     margin: 10px 0px;
-    font-size: 12px;
+    font-size: 15px;
     cursor: pointer;
 }
 
@@ -239,15 +242,18 @@ main .information .dado button img{
 }
 
 footer{
+    position: fixed;
+    bottom: 0%;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 40px;
-    background-color: #2222225d;
+    color: white;
+    background-color: #0e0e0e;
     text-align: center;
-    font-size: 10px;
+    font-size: 13px;
 }
 
 footer div a{
