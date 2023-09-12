@@ -16,19 +16,24 @@ function openMenu() {
         body.classList.add('body-menu-open')
 
     }
+    return
 }
 
-function numberProduts(click) {
-    const plus = document.querySelector('.plus')
-    const minus = document.querySelector('.minus')
+function numberProduts(click){
     const number = document.getElementById('number')
     let valueNumber = Number(number.value)
 
-    number.style.border = "none"
+    number.style.color = "black"
 
-     if (valueNumber < 1){
-        number.style.border = "1px solid red"
-        number.value = valueNumber + 1
+    if (valueNumber < 1){
+        number.style.color = "red"
+        number.value = 1
+        return
+    }
+
+    if (valueNumber > 99) {
+        number.style.color = "red"
+        number.value = 98
         return
     }
 
@@ -43,12 +48,13 @@ function numberProduts(click) {
 
 function addCard(num) {
 
-    const msgTotal = document.getElementById('total')
-    const msgCont = document.getElementById('quantidade')
+    const msg = document.getElementById('message')
     const msgLocal = document.querySelector('#msg-comfimation')
     const msgcard = document.querySelector('#card')
     const displayhideBack = document.querySelector('.button-B')
     const displayhideNext = document.querySelector('.button-N')
+    const msgTotal = document.getElementById('total')
+    
 
     let contProdut = numberProduts()
 
@@ -61,22 +67,62 @@ function addCard(num) {
             msgcard.classList.replace('carrinho-off','carrinho')
             displayhideBack.classList.add('hide-off')
             displayhideNext.classList.add('hide-off')
+            document.querySelector('.delete').style.display = 'block'
+            document.getElementById('mini-img').style.display = 'block'
+            document.querySelector('.button-checkout').style.display = 'block'
+            document.getElementById('msg-vazio').innerHTML = ''
 
-            msgCont.innerHTML = `${contProdut}`
-            msgTotal.innerHTML = `$${total}.00`
+            msg.innerHTML = ` Fall Limited Edition Sneakers $125.00  X${contProdut}`
+            msgTotal.innerHTML = `$${total}`
             msgcard.innerHTML = `${contProdut}`
 
     }
     if(num == '1'){
         window.location.reload()}
+    return
 }
 
 
-function remove() {
-
-    const msgLocal = document.querySelector('#msg-comfimation')
+function remove(){
     const msgcard = document.querySelector('#card')
+    document.querySelector('.button-checkout').style.display = 'none'
+    document.getElementById('total').innerHTML = ``
+    document.getElementById('message').innerHTML = ``
+    document.getElementById('msg-vazio').innerHTML = 'Your card is empty'
+    document.querySelector('.delete').style.display = 'none'
+    document.getElementById('mini-img').style.display = 'none'
+    document.getElementById('number').value = 1
 
     msgcard.classList.replace('carrinho','carrinho-off')
-    msgLocal.classList.replace('msg-comfimation','msg-off')
+    return
+}
+
+function slide(entevlue){
+
+    const slideImg = document.getElementById('slide-img')
+    const slideTumble = document.getElementById(`${entevlue}`)
+    const slideTumbleActive = document.querySelector('.tamble-select')
+
+    if ( slideTumbleActive != null){
+        slideTumbleActive.classList.remove('tamble-select')
+    }
+
+    if(isNaN(entevlue)){
+        const slideImg = document.getElementById('slide-img')
+        const local = slideImg.attributes.src.value
+        var newLocal = Number(local[Number(local.length) - 5])
+
+        if (entevlue === 'next' && newLocal < 4 ){newLocal = newLocal + 1}
+        
+        if (entevlue ==='previous' && newLocal > 1 ){newLocal = newLocal - 1}
+
+    }else{
+        slideTumble.classList.add('tamble-select')
+        var newLocal = entevlue
+    }
+
+    slideImg.src = `../images/image-product-${newLocal}.jpg`
+
+    console.log(slideTumbleActive);
+    return
 }

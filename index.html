@@ -1,103 +1,278 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+
+  <link 
+    rel="icon" 
+    type="image/png" 
+    sizes="32x32" 
+    href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <title>
+    Frontend Mentor | E-commerce product page
+  </title>
   
   <link rel="stylesheet" href="./css/index.css">
 
 </head>
+
 <body id="body">
+
   <header>
-    <div id="div">
-        
+
+    <div class="hider-div" id="div">
+      <!-- Adicionar a sombrar ao abrir o menu-->
     </div>
-    <!--  adicionada ao menu para ativa-lo: class="menu" -->
-    <nav id="menu"> 
+
+    <nav id="menu">
+
       <li>
-        <img onclick="openMenu()" src="./images/icon-close.svg" alt="close icon">
+        <img 
+          onclick="openMenu()" 
+          src="./images/icon-close.svg" 
+          alt="close icon">
       </li>
+
       <li>
         <a href="#">Collections</a>
       </li>
+
       <li>
         <a href="#">Men</a>
       </li>
+
       <li>
         <a href="#">Women</a>
       </li>
+
       <li>
         <a href="#">About</a>
       </li>
+
+
       <li>
         <a href="#">Contact</a>
       </li>
+
     </nav>
+
     <picture>
+
       <div class="img-lefth">
-        <img onclick="openMenu()" class="burge" src="./images/icon-menu.svg" alt="menu">
-        <img src="./images/logo.svg" alt="log">
+
+        <img 
+          onclick="openMenu()" 
+          class="burge" 
+          src="./images/icon-menu.svg" 
+          alt="menu">
+
+        <img 
+          src="./images/logo.svg" 
+          alt="log">
+
       </div>
+
       <div class="img-rigth">
+
         <div>
-          <img src="./images/icon-cart.svg" alt="cart">
-          <span id="card" class="carrinho-off"></span>
+
+          <img 
+            class="cart"
+            src="./images/icon-cart.svg" 
+            alt="cart">
+
+          <span 
+            id="card" 
+            class="carrinho-off">
+            <!-- receber o numero de compras no icone de carrinho-->
+          </span>
+
         </div>
-        <img src="images/image-avatar.png" alt="avatar">
+
+        <img 
+          class="avatar"
+          src="images/image-avatar.png"  
+          alt="avatar">
+
       </div>
+
     </picture>
+
   </header>
+
+
   <main>
+
     <div>
-      <div id="msg-comfimation" class="msg-off">
+
+      <div 
+        id="msg-comfimation" 
+        class="msg-off">
+
         <h2>Carts</h2>
-        <div>
-          <img src="./images/image-product-1-thumbnail.jpg" alt="product">
-          <p class="calc">Fall Limited Edition Sneakers $125.00  X<span id="quantidade"></span> <span class="total" id="total"></span></p>
-          <img onclick="remove()" class="delete" src="./images/icon-delete.svg" alt="delete"> 
+
+        <div id="msg-infor">
+
+          <img 
+            id="mini-img"
+            src="./images/image-product-1-thumbnail.jpg" 
+            alt="product">
+
+          <p>
+            <span id="message" class="calc"></span>
+            <span id="msg-vazio" class="msg-vazio"></span>
+            <span id="total" class="total"></span>
+          </p>
+          
+
+          <img 
+            onclick="remove()" 
+            class="delete" 
+            src="./images/icon-delete.svg" 
+            alt="delete"> 
+
         </div>
-        <button onclick="addCard(1)" class="button-checkout" type="submit">Checkout</button>
+
+        <button 
+          onclick="addCard(1)" 
+          class="button-checkout" 
+          type="submit">
+            Checkout
+        </button>
       </div>
-      <img class="button-back button-B" src="./images/icon-previous.svg" alt="back">
-      <img class="img-shoes" src="./images/image-product-1.jpg" alt="shoes">
-      <img class="button-next button-N" src="./images/icon-next.svg" alt="next">
+
+      <img 
+        onclick="slide('previous')"
+        class="button-back button-B" 
+        src="./images/icon-previous.svg" 
+        alt="back">
+
+      <img 
+        id="slide-img"
+        class="img-shoes" 
+        src="./images/image-product-1.jpg" 
+        alt="shoes">
+
+      <img 
+        onclick="slide('next')"
+        class="button-next button-N" 
+        src="./images/icon-next.svg" 
+        alt="next">
+
+        <div class="section-img">
+
+          <img 
+            id="1" 
+            onmouseenter="slide(1)" 
+            src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
+          
+          <img 
+            id="2" 
+            onmouseenter="slide(2)" 
+            src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
+
+          <img 
+            id="3" 
+            onmouseenter="slide(3)" 
+            src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
+
+          <img 
+            id="4" 
+            onmouseenter="slide(4)" 
+            src="./images/image-product-4-thumbnail.jpg" alt="picture tumble">
+
+        </div>
+
     </div>
+
     <serction class="information">
-        <span class="name-company">Sneaker Company</span>
+
+        <span 
+          class="name-company">
+          Sneaker Company
+        </span>
+
         <h1>Fall Limited Edition Sneakers</h1>
+
         <p>
           These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
+
         <serction class="dado">
-          <div>
+
+          <div class="descont">
+
             <span class="value-final">$125.00</span>
             <span class="porcent-descont">50%</span>
             <span class="number-descont">$250.00</span>
+
           </div>
+
           <div class="dado-box">
-            <img onclick="numberProduts('minus')" class="minus"src="./images/icon-minus.svg" alt="minus">
-            <input id="number" type="number" value="1" min="0">
-            <img onclick="numberProduts('plus')" class="plus"src="./images/icon-plus.svg" alt="plus">
+
+            <img 
+              onclick="numberProduts('minus')" 
+              class="minus"src="./images/icon-minus.svg" 
+              alt="minus">
+
+            <input 
+              id="number" 
+              type="number" 
+              value="1" >
+
+            <img 
+              onclick="numberProduts('plus')" 
+              class="plus"
+              src="./images/icon-plus.svg" 
+              alt="plus">
+
           </div>
-          <button onclick="addCard(0)" id="add-card-button" type="submit">
-            <img src="./images/icon-cart-white.svg" alt="card">
-            Add to cart
+
+          <button 
+            onclick="addCard(0)" 
+            id="add-card-button" 
+            type="submit">
+            <img 
+              src="./images/icon-cart-white.svg" 
+              alt="card">
+              Add to cart
           </button>
+
         </serction>
+
     </serction>
+
   </main>
+
+
   <footer>
+    
       <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="https://github.com/matheus369k">Matheus360k</a>.
+        Challenge by 
+        <a href="https://www.frontendmentor.io?ref=challenge" 
+          target="_blank">
+            Frontend Mentor
+        </a>.
+        Coded by 
+        <a href="https://github.com/matheus369k">
+          Matheus360k
+        </a>.
       </div>
+
   </footer>
+
+
   <script src="./js/index.js"></script>
+
+
 </body>
+
 </html>

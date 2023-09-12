@@ -12,22 +12,10 @@ body{
     height: 100vh;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
+    background-color: white;
 }
 
-@media screen and (min-width:450px) { 
-    main{
-        margin-top: 120px;
-        width: 400px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);    
-        z-index: 0;
- }
-}
-
-
-textarea:focus, input:focus{
+textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
 }
@@ -56,28 +44,56 @@ input[type=number]{
     z-index: 2;
 }
 
+@media screen and (min-width: 1024px) {
+    .div-menu-open {
+        display: none;
+    }
+}
+
 header {
     position: fixed;
     top: 0%;
     padding: 20px;
     height: 60px;
     background-color: white;
-    width: 100%;
+    width: 100vw;
     color: hsl(219, 9%, 45%);
     z-index: 1;
     
 }
 
-header picture{
+@media screen and (min-width:1024px) {
+    header {
+        display: flex;
+        direction: row;
+        width: 100vw;
+        height: 100px;
+        align-items: center;
+        padding: 0px 150px;
+    }
+}
+
+picture{
     display: flex;
     flex-direction: row;
 }
 
-header picture div img{
+picture div img{
     height: 20px;
 }
 
-header picture div div .carrinho{
+@media screen and (min-width: 1024px) {
+    picture div .cart{
+        height: 20px;
+    }
+
+    picture div .avatar{
+        height: 45px;
+        margin-top: -13px;
+    }
+}
+
+.carrinho{
     padding: 2px 4px;
     background-color: hsl(26, 100%, 55%);
     color: white;
@@ -88,30 +104,47 @@ header picture div div .carrinho{
     top: 18px;
 }
 
-header picture div div .carrinho-off{
+.carrinho-off{
     display: none;
 }
 
-header picture .img-lefth{
+.img-lefth{
     display: flex;
+    flex-direction: row;
     width: 50%;
     justify-content: left;
     gap: 20px;
 }
 
-header picture .img-rigth{
+.img-rigth{
     display: flex;
     width: 50%;
     justify-content: right;
     gap: 20px;
 }
 
-header picture div .burge{
+@media screen and (min-width:1024px){
+    .img-rigth{
+        position: fixed;
+        right: 0%;
+        margin-right: 150px;
+        gap: 30px;
+
+    }
+}
+
+.burge{
     cursor: pointer;
 
 }
 
-header .menu{
+@media screen and (min-width:1024px) {
+    .burge{
+        display: none;
+    }
+}
+
+.menu{
     display: flex;
     flex-direction: column;
     margin-left: -20px;
@@ -127,15 +160,26 @@ header .menu{
     background-color: white;
 }
 
-header nav{
+nav{
     display: none;
 }
 
-header .menu li a{
+@media screen and (min-width: 1024px) {
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        margin-right: 30px;
+        margin-left: 30px;
+        position: fixed;
+        left: 300px;
+    }
+}
+
+header nav li a{
     text-decoration: none;
-    color:black;
+    color:rgb(122, 122, 122);
     font-weight: bolder;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.213);
 }
 
 header .menu li{
@@ -147,6 +191,46 @@ header .menu li img{
     cursor: pointer;
 }
 
+@media screen and (min-width: 1024px){
+    header nav li img{
+        display: none;
+    }
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (min-width:450px) { 
+    main{
+        margin-top: 120px;
+        width: 400px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);    
+        z-index: 0;
+ }
+}
+
+@media screen and (min-width:450px) {
+    main{
+        margin-top: 60px;
+    }
+}
+
+@media screen and (min-width:1024px){
+    main{
+        display: flex;
+        flex-direction:row ;
+        gap: 80px;
+        margin-top: -250px;
+    }
+}
+
 main .msg-off{
     display: none;
 }
@@ -154,7 +238,7 @@ main .msg-off{
 main .msg-comfimation{
     padding: 20px;
     width: 94%;
-    height: 230px;
+    height: auto;
     position: fixed;
     z-index: 0;
     border-radius: 10px;
@@ -172,22 +256,35 @@ main .msg-comfimation div img{
 main .msg-comfimation div{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 20px;
     margin-top: 40px;
+    color: hsla(217, 9%, 45%, 0.808);
+    font-weight: 400;
+}
+
+main .msg-comfimation h2{
+    border-bottom: 1px  solid hsl(220, 14%, 75%);
+    font-size: 18px;
+    margin: 0px -20px -0px -20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
 }
 
 main .msg-comfimation div p{
-    font-size: 13px;
+    font-size: 12.4px;
     color: hsl(219, 9%, 45%);
     line-height: 2em;
 }
 
-main .msg-comfimation div p span{
-    letter-spacing: 1px;
+main .msg-comfimation div p .msg-vazio{
+    font-weight: 700;
+    font-size: 14px;
 }
 
-main .msg-comfimation div p .total{
+main .msg-comfimation div .total{
     color: hsl(220, 13%, 13%);
     font-size: 15px;
     font-weight: 700;
@@ -218,11 +315,56 @@ main .img-shoes{
     height: 280px;
 }
 
-@media screen and (min-width:450px) {
-    main{
-        margin-top: 60px;
+@media screen and (min-width:1024px) {
+    main .img-shoes{
+        width: 320px;
+        height: 340px;
+        position: fixed;
+        top: 0%;
+        right: 90%;
+        border-radius: 15px;
+        box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.402);
     }
 }
+
+main .section-img{
+    display: none;
+}
+
+@media screen and (min-width:1024px) {
+    main .section-img{
+        display: flex;
+        flex-direction: rom;
+        width: 320px;
+        height: 60px;
+        position: fixed;
+        top: 430px;
+        gap: 26px;
+        border-radius: 5px;
+        right: 90%;
+    }
+
+    main .section-img img{
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.356);
+        cursor: pointer;
+    }
+
+    main .section-img .tamble-select{
+        border: 3px solid hsl(26, 100%, 55%);
+        opacity: 50%;
+        background-color: hsl(25, 100%, 94%);
+    }
+
+    main .section-img img:hover{
+        border: 2px solid hsl(25, 100%, 94%);
+    }
+
+
+}
+
 
 main .button-back{
     right: 90%;
@@ -231,6 +373,7 @@ main .button-back{
 main .button-next{
     left: 90%;
 }
+
 main .hide-off{
     display: none;
 }
@@ -246,6 +389,13 @@ main .button-next{
     cursor: pointer;
 }
 
+@media screen and (min-width: 1024px) {
+    main .button-back,
+    main .button-next{
+        display: none;
+    }
+}
+
 main .button-back:hover,
 main .button-next:hover{
     transition: .5s;
@@ -259,6 +409,15 @@ main .information{
 
 }
 
+@media screen and (min-width:1024px) {
+    main .information{
+        position: absolute;
+        left: 140px;
+        top: 100px;
+        width: 500px;
+    }
+}
+
 main .information .name-company{
     color: hsl(26, 100%, 55%);
     text-transform: uppercase;
@@ -268,12 +427,24 @@ main .information .name-company{
     text-shadow: 1px 1px hsla(26, 100%, 55%, 0.36);
 }
 
+@media screen and (min-width:1024px) {
+    main .information .name-company{
+        font-size: 16px;
+    }
+}
+
 main .information h1{
     font-size: 1.8em;
     letter-spacing: none;
     font-weight: 700;
     margin: 10px 0px;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.378);
+}
+
+@media screen and (min-width:1024px){
+    main .information h1{
+        font-size: 2.3em;
+    }
 }
 
 main .information p{
@@ -293,6 +464,13 @@ main .information .dado div span{
     width: 33.3%;
     display: flex;
     align-items: center;
+}
+
+@media screen and (min-width:1024px){
+    main .information .dado .descont{
+        width: 120px;
+        display: block;
+    }
 }
 
 main .information .dado div .number-descont{
@@ -315,6 +493,22 @@ main .information .dado div .value-final{
     margin: 10px 0px;
 }
 
+@media screen and (min-width:1024px){
+    main .information .dado .descont .value-final{
+        font-size: 18px;
+    }
+
+    main .information .dado .descont .porcent-descont{
+        float: right;
+        margin-top: -30px;
+
+    }
+
+    main .information .dado .descont .number-descont{
+        margin-left: 10px;
+    }
+}
+
 main .information .dado .dado-box{
     font-weight: 700;
     font-size: 18px;
@@ -330,12 +524,19 @@ main .information .dado .dado-box .minus {
     cursor: pointer;
 }
 
+@media screen and (min-width:1024px) {
+    main .information .dado .dado-box .minus{
+        left: 25px;
+        margin-top: 22px;
+    }
+}
+
 main .information .dado .dado-box .plus{
     position: absolute;
     width: 20px;
     padding: 2px;
     margin-top: 15px;
-    left: 85%;
+    left: 50%;
     cursor: pointer;
 }
 
@@ -345,9 +546,14 @@ main .information .dado .dado-box .plus:hover{
     transform: scale(140%);
 }
 
+main .information .dado input{
+    width: 35px;
+    border: 1p solid blue;
+    margin: auto;
+}
+
 main .information .dado input,
 main .information .dado button{
-    width: 100%;
     height: 50px;
     border-radius: 10px;
     border: none;
@@ -356,6 +562,7 @@ main .information .dado button{
 }
 
 main .information .dado button{
+    width: 100%;
     background-color: hsl(26, 100%, 55%);
     border: none;
     color: white;
@@ -364,6 +571,23 @@ main .information .dado button{
     margin: 40px 0px;
     font-size: 15px;
     cursor: pointer;
+}
+
+@media screen and (min-width:1024px){
+    main .information .dado .dado-box,
+    main .information .dado button{
+        width: 50%;
+    }
+
+    main .information .dado .dado-box input{
+        margin-left: 110px;
+    }
+
+    main .information .dado button{
+        float: right;
+        margin-right: -50px;
+        margin-top: -39px;
+    }
 }
 
 main .msg-comfimation .button-checkout:hover,
@@ -389,6 +613,13 @@ footer{
     background-color: #0e0e0e;
     text-align: center;
     font-size: 13px;
+}
+
+@media screen and (min-width: 1024px) {
+    footer{
+        position: fixed;
+        top: calc(100vh - 40px);
+    }
 }
 
 footer div a{
