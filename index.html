@@ -32,29 +32,35 @@
       <!-- Adicionar a sombrar ao abrir o menu-->
 
       <section class="view-imagem">
+
         <img
           onclick="viewImagem()"
           id="closed"
           class="closed"
           src="./images/icon-close.svg"
           alt="closed">
+
         <img
           onclick="slide('previous')"
           class="button-back"
           src="./images/icon-previous.svg"
           alt="back">
+
         <img
           id="view-slide-img"
           class="img-shoes"
           src="./images/image-product-1.jpg"
           alt="shoes">
+
         <img
           onclick="slide('next')"
           class="button-next"
           src="./images/icon-next.svg"
           alt="next">
+
           <div class="section-img">
-            <li id="5" class="tamble-select">
+
+            <li id="5" class="view-tumble-select">
               <img
                 onclick="slide(1)"
                 src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
@@ -65,16 +71,19 @@
                 onclick="slide(2)"
                 src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
             </li>
+
             <li id="7">
               <img
                 onclick="slide(3)"
                 src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
             </li>
+
             <li id="8">
               <img
                 onclick="slide(4)"
                 src="./images/image-product-4-thumbnail.jpg" alt="picture tumble">
             </li>
+
           </section>
 
         </div>
@@ -137,6 +146,7 @@
         <div>
 
           <img 
+            onclick="messageOff()"
             class="cart"
             src="./images/icon-cart.svg" 
             alt="cart">
@@ -161,12 +171,11 @@
   </header>
 
 
-  <main>
+  <main onclick="allClosed()">
 
     <div>
 
       <div 
-        onclick="viewImagem()"
         id="msg-comfimation" 
         class="msg-off">
 
@@ -223,7 +232,7 @@
 
         <div class="section-img">
 
-          <li id="1" class="tamble-select">
+          <li id="1" class="tumble-select">
             <img
               onclick="slide(1)" 
               src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">

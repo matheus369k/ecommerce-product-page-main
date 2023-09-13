@@ -102,15 +102,17 @@ function remove(){
 function slide(entevalue){
 
     const slideImg = document.getElementById('slide-img')
-    const slideTumble = document.getElementById(`${entevalue}`)
+    const slideImgView = document.getElementById('view-slide-img')
     const slideTumbleActive = document.querySelector('.tamble-select')
+    const slideTumbleActiveView = document.querySelector('.view-tamble-select')
 
-    if (slideTumbleActive != null){
+    if (slideTumbleActive != null || slideTumbleActiveView != null ){
         slideTumbleActive.classList.remove('tamble-select')
+        slideTumbleActiveView.classList.remove('view-tamble-select')
     }
 
-    if(isNaN(entevalue)){
-        const slideImg = document.getElementById('slide-img')
+    if(isNaN(entevalue)){ 
+
         const local = slideImg.attributes.src.value
         var newLocal = Number(local[Number(local.length) - 5])
 
@@ -118,13 +120,13 @@ function slide(entevalue){
         
         if (entevalue === 'previous' && newLocal > 1 ){newLocal = newLocal - 1}
 
-        document.getElementById(`${newLocal + 4}`).classList.add('tamble-select')
+    }else{var newLocal = entevalue}
 
-    }else{
-        slideTumble.classList.add('tamble-select')
-        var newLocal = entevalue
-    }
-    slideImg.src = `../images/image-product-${newLocal}.jpg`
+    document.getElementById(`${newLocal}`).classList.add('tamble-select')
+    document.getElementById(`${newLocal + 4}`).classList.add('view-tamble-select')
+
+    slideImg.src = `./images/image-product-${newLocal}.jpg`
+    slideImgView.src = `./images/image-product-${newLocal}.jpg`
     return
 }
 
@@ -136,5 +138,19 @@ function viewImagem(){
     }else{
         closed.classList.add('div-menu-open')
     }
+    return
+}
+
+function messageOff() {
+    const msgoff = document.getElementById('msg-comfimation')
+    const cart = document.getElementById('card')
+
+    if (msgoff.classList.contains('msg-off')) {
+        msgoff.classList.replace('msg-off','msg-comfimation')
+    }else(msgoff.classList.replace('msg-comfimation','msg-off'))
+
+    if (cart.classList.contains('carrinho')){
+        addCard(num)
+    }else{remove()}
     return
 }
