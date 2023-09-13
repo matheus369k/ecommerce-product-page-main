@@ -15,6 +15,12 @@ body{
     background-color: white;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 textarea:focus, input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
@@ -44,9 +50,97 @@ input[type=number]{
     z-index: 2;
 }
 
+.hider-div .view-imagem{
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
-    .div-menu-open {
+    .hider-div{
         display: none;
+    }
+    .div-menu-open {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .div-menu-open .img-shoes{
+        width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        border: 2px solid hsl(25, 100%, 94%);
+        transition: 2s;
+    }
+
+    .div-menu-open .button-next{
+        right:34%;
+    }
+
+    .div-menu-open .button-back{
+        left: 34%;
+    }
+
+    .div-menu-open .button-next,
+    .div-menu-open .button-back{
+        position: fixed;
+        background-color: white;
+        padding: .7% 1%;
+        border-radius: 50%;
+        margin-bottom: 80px;
+        cursor: pointer;
+    }
+
+    .div-menu-open .section-img{
+        width: 400px;
+        height: 50px;
+        gap: 30px;
+        flex-direction: row;
+        display: flex;
+        gap: 40px;
+        margin-top: 30px;
+        
+    }
+
+    .div-menu-open .closed{
+        width: 18px;
+        position: fixed;
+        right: 36%;
+        top: 8%;
+        cursor: pointer;
+    }
+
+
+    .div-menu-open .section-img .tamble-select{
+        border: 3px solid hsl(26, 100%, 55%);
+    }
+
+    .div-menu-open .section-img .tamble-select img{
+        opacity: 50%;
+    }
+
+    .div-menu-open .section-img li{
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+        background-color: white;
+        cursor: pointer;
+    }
+
+    .div-menu-open .section-img li img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .div-menu-open .section-img li img:hover{
+        transition: .5s;
+        transform: scale(105%);
+        opacity: 50%;
     }
 }
 
@@ -198,16 +292,18 @@ header .menu li img{
 }
 
 main{
+    margin-top: 60px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width:450px) { 
     main{
-        margin-top: 120px;
-        width: 400px;
+        max-width: 400px;
+        margin-top: 200px;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -224,10 +320,12 @@ main{
 
 @media screen and (min-width:1024px){
     main{
+        height:500px;
+        width: 1000px;
         display: flex;
         flex-direction:row ;
-        gap: 80px;
-        margin-top: -250px;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -242,10 +340,21 @@ main .msg-comfimation{
     position: fixed;
     z-index: 0;
     border-radius: 10px;
-    margin: 70px 3% 0 3% ;
+    margin: 80px 3% 0 3% ;
 
     background-color: white;
     box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.383);
+}
+
+@media screen and (min-width:450px) {
+    main .msg-comfimation{
+        width: 380px;
+        height: 250px;
+    }
+
+    main .msg-comfimation div .msg-vazio{
+       text-align: center;
+    }
 }
 
 main .msg-comfimation div img{
@@ -310,9 +419,16 @@ main .msg-comfimation .button-checkout{
 }
 
 main .img-shoes{
-    margin-top: 60px;
+    margin-top: 70px;
     width: 100%;
     height: 280px;
+}
+
+@media screen and (min-width:450px) {
+    main .img-shoes{
+        width: 400px;
+        border-radius: 10px;
+    }
 }
 
 @media screen and (min-width:1024px) {
@@ -320,10 +436,11 @@ main .img-shoes{
         width: 320px;
         height: 340px;
         position: fixed;
-        top: 0%;
-        right: 90%;
+        margin-top: -200px;
+        right: 85%;
         border-radius: 15px;
         box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.402);
+        cursor: pointer;
     }
 }
 
@@ -334,35 +451,34 @@ main .section-img{
 @media screen and (min-width:1024px) {
     main .section-img{
         display: flex;
-        flex-direction: rom;
+        flex-direction: row;
         width: 320px;
-        height: 60px;
+        height: auto;
         position: fixed;
-        top: 430px;
+        top: 420px;
         gap: 26px;
-        border-radius: 5px;
-        right: 90%;
-    }
+        right: 85%;}
 
-    main .section-img img{
+
+    main .section-img li{
         width: 60px;
         height: 60px;
+        border-radius: 10px;
+        background-color: white;
+        cursor: pointer;}
+
+    main .section-img li img{
+        width: 100%;
+        height: 100%;
         border-radius: 5px;
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.356);
-        cursor: pointer;
     }
 
     main .section-img .tamble-select{
-        border: 3px solid hsl(26, 100%, 55%);
-        opacity: 50%;
-        background-color: hsl(25, 100%, 94%);
-    }
+        border: 3px solid hsl(26, 100%, 55%);}
 
-    main .section-img img:hover{
-        border: 2px solid hsl(25, 100%, 94%);
-    }
-
-
+    main .section-img li img:hover,
+    main .section-img .tamble-select img{
+        opacity: 50%;}
 }
 
 
@@ -380,11 +496,12 @@ main .hide-off{
 
 main .button-back,
 main .button-next{
+    width: 40px;
     position: absolute;
     top: 200px;
     background-color: white;
     width: 25px;
-    padding: 8px;
+    padding: 5px 8px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -406,15 +523,20 @@ main .information{
     padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
 }
 
 @media screen and (min-width:1024px) {
     main .information{
-        position: absolute;
-        left: 140px;
-        top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        margin-left: 380px;
+        height: 500px;
         width: 500px;
+        letter-spacing: 3px;
     }
 }
 
@@ -536,8 +658,14 @@ main .information .dado .dado-box .plus{
     width: 20px;
     padding: 2px;
     margin-top: 15px;
-    left: 50%;
+    left: 85%;
     cursor: pointer;
+}
+
+@media screen and (min-width:1024px){
+    main .information .dado .dado-box .plus{
+        left: 50%;
+    }
 }
 
 main .information .dado .dado-box .minus:hover,
@@ -599,31 +727,4 @@ main .information .dado button:hover{
 
 main .information .dado button img{
     width: 12px;
-    margin-right: 5px;
-}
-
-footer{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    color: white;
-    background-color: #0e0e0e;
-    text-align: center;
-    font-size: 13px;
-}
-
-@media screen and (min-width: 1024px) {
-    footer{
-        position: fixed;
-        top: calc(100vh - 40px);
-    }
-}
-
-footer div a{
-    text-decoration: none;
-    color: hsl(26, 100%, 55%);
-    text-align: justify;
-}
+    margin-right: 5px;}

@@ -30,6 +30,58 @@
 
     <div class="hider-div" id="div">
       <!-- Adicionar a sombrar ao abrir o menu-->
+
+      <section class="view-imagem">
+        <img
+          onclick="viewImagem()"
+          id="closed"
+          class="closed"
+          src="./images/icon-close.svg"
+          alt="closed">
+        <img
+          onclick="slide('previous')"
+          class="button-back"
+          src="./images/icon-previous.svg"
+          alt="back">
+        <img
+          id="view-slide-img"
+          class="img-shoes"
+          src="./images/image-product-1.jpg"
+          alt="shoes">
+        <img
+          onclick="slide('next')"
+          class="button-next"
+          src="./images/icon-next.svg"
+          alt="next">
+          <div class="section-img">
+            <li id="5" class="tamble-select">
+              <img
+                onclick="slide(1)"
+                src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
+            </li>
+        
+            <li id="6">
+              <img
+                onclick="slide(2)"
+                src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
+            </li>
+            <li id="7">
+              <img
+                onclick="slide(3)"
+                src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
+            </li>
+            <li id="8">
+              <img
+                onclick="slide(4)"
+                src="./images/image-product-4-thumbnail.jpg" alt="picture tumble">
+            </li>
+          </section>
+
+        </div>
+
+      <picture>
+        
+      </picture>
     </div>
 
     <nav id="menu">
@@ -114,6 +166,7 @@
     <div>
 
       <div 
+        onclick="viewImagem()"
         id="msg-comfimation" 
         class="msg-off">
 
@@ -150,13 +203,14 @@
       </div>
 
       <img 
-        onclick="slide('previous')"
+        onclick="slide('previous')" 
         class="button-back button-B" 
         src="./images/icon-previous.svg" 
-        alt="back">
+        alt="back"> 
 
-      <img 
-        id="slide-img"
+      <img
+        onclick="viewImagem()"
+        id="slide-img" 
         class="img-shoes" 
         src="./images/image-product-1.jpg" 
         alt="shoes">
@@ -169,25 +223,29 @@
 
         <div class="section-img">
 
-          <img 
-            id="1" 
-            onmouseenter="slide(1)" 
-            src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
+          <li id="1" class="tamble-select">
+            <img
+              onclick="slide(1)" 
+              src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
+          </li>
           
-          <img 
-            id="2" 
-            onmouseenter="slide(2)" 
-            src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
+          <li id="2">
+            <img  
+              onclick="slide(2)" 
+              src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
+          </li>
 
-          <img 
-            id="3" 
-            onmouseenter="slide(3)" 
-            src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
+          <li id="3">
+            <img
+              onclick="slide(3)" 
+              src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
+          </li>
 
-          <img 
-            id="4" 
-            onmouseenter="slide(4)" 
-            src="./images/image-product-4-thumbnail.jpg" alt="picture tumble">
+          <li id="4">
+            <img
+              onclick="slide(4)" 
+              src="./images/image-product-4-thumbnail.jpg" alt="picture tumble">
+          </li>
 
         </div>
 
@@ -252,25 +310,10 @@
 
   </main>
 
+  
+  <script src="./js/index.js">
 
-  <footer>
-    
-      <div class="attribution">
-        Challenge by 
-        <a href="https://www.frontendmentor.io?ref=challenge" 
-          target="_blank">
-            Frontend Mentor
-        </a>.
-        Coded by 
-        <a href="https://github.com/matheus369k">
-          Matheus360k
-        </a>.
-      </div>
-
-  </footer>
-
-
-  <script src="./js/index.js"></script>
+  </script>
 
 
 </body>

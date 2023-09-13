@@ -94,35 +94,47 @@ function remove(){
     document.getElementById('number').value = 1
 
     msgcard.classList.replace('carrinho','carrinho-off')
+
+
     return
 }
 
-function slide(entevlue){
+function slide(entevalue){
 
     const slideImg = document.getElementById('slide-img')
-    const slideTumble = document.getElementById(`${entevlue}`)
+    const slideTumble = document.getElementById(`${entevalue}`)
     const slideTumbleActive = document.querySelector('.tamble-select')
 
-    if ( slideTumbleActive != null){
+    if (slideTumbleActive != null){
         slideTumbleActive.classList.remove('tamble-select')
     }
 
-    if(isNaN(entevlue)){
+    if(isNaN(entevalue)){
         const slideImg = document.getElementById('slide-img')
         const local = slideImg.attributes.src.value
         var newLocal = Number(local[Number(local.length) - 5])
 
-        if (entevlue === 'next' && newLocal < 4 ){newLocal = newLocal + 1}
+        if (entevalue === 'next' && newLocal < 4 ){newLocal = newLocal + 1}
         
-        if (entevlue ==='previous' && newLocal > 1 ){newLocal = newLocal - 1}
+        if (entevalue === 'previous' && newLocal > 1 ){newLocal = newLocal - 1}
+
+        document.getElementById(`${newLocal + 4}`).classList.add('tamble-select')
 
     }else{
         slideTumble.classList.add('tamble-select')
-        var newLocal = entevlue
+        var newLocal = entevalue
     }
-
     slideImg.src = `../images/image-product-${newLocal}.jpg`
+    return
+}
 
-    console.log(slideTumbleActive);
+function viewImagem(){
+    const closed = document.getElementById('div')
+
+    if (closed.classList.contains('div-menu-open')) {
+        closed.classList.remove('div-menu-open')
+    }else{
+        closed.classList.add('div-menu-open')
+    }
     return
 }
