@@ -33,18 +33,34 @@
 
       <section class="view-imagem">
 
-        <img
+        <svg 
           onclick="viewImagem()"
           id="closed"
-          class="closed"
-          src="./images/icon-close.svg"
-          alt="closed">
+          class="closed" 
+          width="14" 
+          height="15" 
+          xmlns="http://www.w3.org/2000/svg">
+          <path 
+            d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" 
+            fill="#69707D" 
+            fill-rule="evenodd"/>
+        </svg>
 
-        <img
+        <li
           onclick="slide('previous')"
-          class="button-back"
-          src="./images/icon-previous.svg"
-          alt="back">
+          class="button-back">
+          <svg 
+            width="12" 
+            height="18" 
+            xmlns="http://www.w3.org/2000/svg">
+            <path 
+              d="M11 1 3 9l8 8" 
+              stroke="#1D2026" 
+              stroke-width="3" 
+              fill="none" 
+              fill-rule="evenodd"/>
+          </svg>
+        </li>
 
         <img
           id="view-slide-img"
@@ -52,31 +68,41 @@
           src="./images/image-product-1.jpg"
           alt="shoes">
 
-        <img
+        <li 
           onclick="slide('next')"
-          class="button-next"
-          src="./images/icon-next.svg"
-          alt="next">
+          class="button-next" >
+          <svg
+            width="15"
+            height="20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m2 1 8 8-8 8"
+              stroke="#1D2026"
+              stroke-width="3"
+              fill="none"
+              fill-rule="evenodd"/>
+          </svg>
+        </li>
 
-          <div class="section-img">
+        <div class="section-img">
 
-            <li id="5" class="view-tumble-select">
-              <img
+          <li id="5" class="view-tamble-select">
+            <img
                 onclick="slide(1)"
                 src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
-            </li>
+          </li>
         
-            <li id="6">
-              <img
-                onclick="slide(2)"
-                src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
-            </li>
+          <li id="6">
+            <img
+              onclick="slide(2)"
+              src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
+          </li>
 
-            <li id="7">
-              <img
-                onclick="slide(3)"
-                src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
-            </li>
+          <li id="7">
+            <img
+              onclick="slide(3)"
+              src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
+          </li>
 
             <li id="8">
               <img
@@ -171,7 +197,7 @@
   </header>
 
 
-  <main onclick="allClosed()">
+  <main>
 
     <div>
 
@@ -232,7 +258,7 @@
 
         <div class="section-img">
 
-          <li id="1" class="tumble-select">
+          <li id="1" class="tamble-select">
             <img
               onclick="slide(1)" 
               src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
