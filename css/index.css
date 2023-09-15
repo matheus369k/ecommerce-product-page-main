@@ -16,17 +16,17 @@ body {
     background-color: white ;
 }
 
-textarea :focus, 
-input :focus {
+textarea:focus, 
+input:focus {
     box-shadow: 0 0 0 0 ;
     outline: 0 ;
 }
 
-input [ type=number ] ::-webkit-inner-spin-button {
+input[ type=number ]::-webkit-inner-spin-button {
     -webkit-appearance: none ;
 }
 
-input [ type=number ] {
+input[ type=number ] {
     -moz-appearance: textfield ;
     appearance: texfield ;
 }
@@ -113,8 +113,8 @@ input [ type=number ] {
         margin-bottom: 20px ;
     }
 
-    .div-menu-open .button-back :hover path,
-    .div-menu-open .button-next :hover path {
+    .div-menu-open .button-back:hover path,
+    .div-menu-open .button-next:hover path {
         stroke: hsl(26, 100%, 55%) ;
     }
 
@@ -328,7 +328,7 @@ header nav li a {
         cursor: pointer ;
     }
 
-    header nav li :hover {
+    header nav li:hover {
         border-bottom: 5px solid hsl(26, 100%, 55%) ;
     }
 }
@@ -615,8 +615,8 @@ main .button-next {
     }
 }
 
-main .button-back :hover,
-main .button-next :hover {
+main .button-back:hover,
+main .button-next:hover {
     transition: .5s ;
     transform: scale( 110% ) ;
 }
@@ -789,8 +789,8 @@ main .information .dado .dado-box .plus {
     }
 }
 
-main .information .dado .dado-box .minus :hover,
-main .information .dado .dado-box .plus :hover {
+main .information .dado .dado-box .minus:hover,
+main .information .dado .dado-box .plus:hover {
     transition: .5s ;
     transform: scale( 140% ) ;
 }
@@ -839,8 +839,8 @@ main .information .dado button {
     }
 }
 
-main .msg-comfimation .button-checkout :hover,
-main .information .dado button :hover {
+main .msg-comfimation .button-checkout:hover,
+main .information .dado button:hover {
     background-color: hsla(26, 92%, 50%, 0.804) ;
     transition: .5s ;
     transform: scale( 101% ) ;
