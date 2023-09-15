@@ -6,7 +6,7 @@
 __📄Nota__: *O projeto tem como foco o desenvolvimeto de uma pagina web simulando uma aba de compra de um produto em um site de compras ficticio.*
 
 ## 📋Linguagens
-- HTMLt
+- HTML
 - CSS
 - JavaScript
 
