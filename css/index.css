@@ -212,7 +212,7 @@ picture div img{
         margin-right: 0px ;
     }
 
-    picture div .avatar :hover {
+    picture div .avatar:hover {
         border: 1px solid hsl(26, 100%, 55%) ;
     }
 }
