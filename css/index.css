@@ -9,11 +9,12 @@
 
 html,
 body {
+    overflow-x: hidden;
     height: 100vh ;
-    width: 100% ;
+    width: 100vw ;
     font-family: 'Kumbh Sans', sans-serif ;
     font-size: 16px ;
-    background-color: white ;
+    background-color: white;
 }
 
 textarea:focus, 
@@ -32,7 +33,7 @@ input[ type=number ] {
 }
 
 .body-menu-open {
-    position: fixed ;
+    overflow: hidden;
 }
 
 .div-menu-open {
