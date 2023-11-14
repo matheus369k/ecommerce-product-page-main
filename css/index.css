@@ -118,6 +118,7 @@ main {
 .container_thumbnail_img li {
     width: 25%;
     height: auto;
+    border-radius: 10px;
 }
 
 .container_thumbnail_img img {
@@ -229,7 +230,7 @@ main {
     position: fixed;
     left: 0px;
     top: 0px;
-    background-color: rgba(0, 0, 0, 0.559);
+    background-color: rgba(0, 0, 0, 0.789);
     width: 100%;
     height: 100vh;;
     z-index: 2;
@@ -244,7 +245,7 @@ main {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 44%;
+    width: 39%;
     height: min-content; 
 }
 
@@ -253,9 +254,9 @@ main {
     height: 20px;
     width: 20px;
     position: relative;
-    left: calc(20% - 10px);
+    left: calc(17.5% - 10px);
     cursor: pointer;
-    transform: scale(1.5);
+    transform: scale(1.8);
 }
 
 .closed path:hover {
@@ -297,22 +298,113 @@ main {
 
 .product_img_selected {
     height: auto;
-    width: 40%;
+    max-height: 75vh;
+    max-width: 40%;
+    width: 35%;
     border-radius: 20px
 }
 
 .container_thumbnail_img_selected {
     display: flex;
     flex-direction: row;
-    width: 40%;
-    gap: 20px;
+    justify-content: space-around;
+    width: 30%;
 }
 
 .container_thumbnail_img_selected li {
-    width: 25%;
+    cursor: pointer;
+    width: 20%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .container_thumbnail_img_selected img {
     width: 100%;
-    border-radius: 10px
+    height: 100%;
+    border-radius: 8px;
+}
+
+.container_thumbnail_img_selected li img:hover{
+    opacity: 50%;
+}
+
+
+.tumble_selected {
+    border: 2px solid rgb(255, 125, 26);
+}
+
+.tumble_selected img {
+    opacity: 25%;
+}
+
+.hider_div {
+    display: none;
+}
+
+.card_container {
+    padding: 15px 0px;
+    width: 300px;
+    height: 210px;
+    background-color: white;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.264);
+    border-radius: 10px;
+    position: fixed;
+    top: 80px;
+    right: 10vw;
+}
+
+.card_select {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100px;
+}
+
+.card_select .option {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+}
+
+.option img {
+    width: 50px;
+    height: auto;
+}
+
+.option p {
+    width: 150px;
+    font-size: .5em;
+    height: auto;
+}
+
+.option i {
+    background:  url(../images/icon-delete.svg) center center no-repeat;
+    width: 10%;
+    height: auto;
+}
+
+.card_container h2 {
+    color: hsl(220, 13%, 13%);
+    padding-left: 25px;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid hsl(220, 14%, 75%);
+}
+
+.card_container button {
+    cursor: pointer;
+    height: 40px;
+    width: 80%;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    text-align: center;
+    margin-left: 10%;
+    border-radius: 5px;
+    border: none;
+}
+
+.hider_cart {
+    display: none;
 }
