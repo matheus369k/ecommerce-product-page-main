@@ -8,10 +8,10 @@ document.getElementById("main_img").addEventListener("click", ()=>{
     }
 
     
-    // A função inicia na linha 384!
+    // A função inicia na linha 434!
     CloseOpenBoxStore("closed")
 
-    // A função inicia na linha 182!
+    // A função inicia na linha 190!
     verification()
 
     return
@@ -23,7 +23,7 @@ document.getElementById("close").addEventListener("click", ()=> {
 
     document.querySelector(".container_thumbnail_div_selected").classList.add("hider_div")
 
-    // A função inicia na linha 182!
+    // A função inicia na linha 190!
     verification()
 
     return
@@ -40,23 +40,16 @@ const ulDivThumb = document.getElementById("ul_div_thumb")
 const ulThumb = document.getElementById("ul_thumb")
 
 
-document.querySelector(".container_next_pre").childNodes.forEach((btn, index) => {
+document.querySelectorAll(".container_next_pre")[1].childNodes.forEach((btn, index) => {
 
-    btn.addEventListener("click", () => {
-        
-        const NumberImgThumb = imgMain.attributes.src.value.split("-")[2][0]
+    // A função inicia na linha 71!
+    SlideSwitch(btn, index)
+})
 
-        // A função inicia na linha 80!
-        SwitchImgMain(index, NumberImgThumb)
+document.querySelectorAll(".container_next_pre")[0].childNodes.forEach((btn, index) => {
 
-        // A função inicia na linha 129!
-        SwitchStyleSelected()
-        
-        // A função inicia na linha 384!
-        CloseOpenBoxStore("closed")
-
-        return
-    })
+    // A função inicia na linha 71!
+    SlideSwitch(btn, index)
 })
 
 
@@ -65,15 +58,33 @@ setInterval(() => {
 
     const NumberImgThumb = imgMain.attributes.src.value.split("-")[2][0]
     
-    // A função inicia na linha 105!
+    // A função inicia na linha 114!
     AutoSlide(NumberImgThumb)
 
     
-    // A função inicia na linha 129!
+    // A função inicia na linha 138!
     SwitchStyleSelected()
 
 }, 10000)
 
+// Função responsavel por trocar a imagem em foco.
+function SlideSwitch(btn, index) {
+    btn.addEventListener("click", () => {
+
+        const NumberImgThumb = imgMain.attributes.src.value.split("-")[2][0]
+
+        // A função inicia na linha 90!
+        SwitchImgMain(index, NumberImgThumb)
+
+        // A função inicia na linha 138!
+        SwitchStyleSelected()
+
+        // A função inicia na linha 434!
+        CloseOpenBoxStore("closed")
+
+        return
+    })
+}
 
 // função responsavel por trocar a imagem em foco ao clicar no icone de seta que, apontam para direita ou para esquerda.
 function SwitchImgMain(index, NumberImgThumb) {
@@ -171,7 +182,7 @@ function SwitchStyleSelected() {
 }
 
 
-// A função inicia na linha 182!
+// A função inicia na linha 190!
 verification()
 
 
@@ -217,7 +228,7 @@ function AddStyleSwitchImgSeleceted(verification) {
 
             divImgMain.src = `./images/image-product-${thumbImg.childNodes[1].attributes.src.value.split("-")[2][0]}.jpg`
 
-            // A função inicia na linha 384!
+            // A função inicia na linha 434!
             CloseOpenBoxStore("closed")
 
             return
@@ -229,10 +240,10 @@ function AddStyleSwitchImgSeleceted(verification) {
 // Codigo responsavel por criar um laço entre os botões reponsavel por alterar a quantidade de produtos escolhidos.
 document.querySelectorAll(".minus_plus").forEach((btn, index) => {
 
-    // A função inicia na linha 384!
+    // A função inicia na linha 434!
     CloseOpenBoxStore("closed")
 
-    // A função inicia na linha 246!
+    // A função inicia na linha 254!
     AddRemoverValueInput(btn, index)
 
     return
@@ -267,21 +278,21 @@ function AddRemoverValueInput(btn, index) {
 // Codigo responsavel por detectar o clique no icone de carrinho de compras
 document.querySelector("#icon_cart").addEventListener("click", ()=>{
 
-    // A função inicia na linha 384!
+    // A função inicia na linha 434!
     CloseOpenBoxStore()
 
     return
 })
 
 
-// Codigo responsavel por adicinar o produto ao carrinho criando uma li a cada item ou conjunto comprado(s). 
+// Codigo responsavel por adicinar o produto ao carrinho criando uma li a cada item ou conjunto comprado(s).
+const fotherCart = document.getElementById("cart")
+
 document.getElementById("submitbtn").addEventListener("click", ()=>{
     
     const input = document.getElementById("input").value
 
-    const fother = document.getElementById("cart")
-
-    const idelete = fother.childNodes.length
+    const idelete = fotherCart.childNodes.length
 
 
     const li = document.createElement("li")
@@ -290,7 +301,7 @@ document.getElementById("submitbtn").addEventListener("click", ()=>{
 
     li.setAttribute("id", `deleta-${idelete}`)
 
-    fother.appendChild(li)
+    fotherCart.appendChild(li)
 
     
     const img = document.createElement("img")
@@ -330,25 +341,25 @@ document.getElementById("submitbtn").addEventListener("click", ()=>{
     li.appendChild(img)
 
 
-    // A função inicia na linha 351!
-    countproductboy(fother)
+    // A função inicia na linha 359!
+    countproductboy()
 
 
-    // A função inicia na linha 384!
+    // A função inicia na linha 434!
     CloseOpenBoxStore("open")
 
-    // A função inicia na linha 404!
-    deleteItem(fother)
+    // A função inicia na linha 455!
+    deleteItem()
 
     return
 })
 
 
 // Função responsavel por adicionar icone vermelho acima do carrinho com a quantidade de produtos ou conjunto de produtos comprados.
-function countproductboy(fother) {
+function countproductboy() {
 
     const fotherCartStore = document.querySelector("#cart_boy_container")
-    
+
     if (!document.querySelector(".icon_cart_buy"))
     {
 
@@ -360,39 +371,79 @@ function countproductboy(fother) {
 
     }
 
-    if ((fother.childNodes.length) > 0) 
+    if ((fotherCart.childNodes.length) > 0) 
     {
 
-        document.querySelector(".icon_cart_buy").innerHTML = `${(fother.childNodes.length)}`
+        fotherCart.parentNode.classList.remove("empty")
+
+        document.querySelector(".icon_cart_buy").innerHTML = `${(fotherCart.childNodes.length)}`
 
     }
     else
     {
+        
+        fotherCart.parentNode.classList.add("empty")
 
         fotherCartStore.removeChild(document.querySelector(".icon_cart_buy"))
-        
-        // A função inicia na linha 384!
+
+
+        // A função inicia na linha 432!
         CloseOpenBoxStore("closed")
+
+    }
+
+    // A função inicia na linha 405!
+    msgEmptyCart()
+
+    return
+}
+
+// A função inicia na linha 405!
+msgEmptyCart()
+
+// Função com o objetivo de adicionar a messangem de vazio a aba do  de compras
+function msgEmptyCart() {
+
+    const p = document.createElement("p")
+    
+    p.setAttribute("id", "msg_empty")
+
+    const empty_text_p = document.createTextNode("Your cart is empty.")
+
+    p.appendChild(empty_text_p)
+
+    console.log(fotherCart.childNodes.length);
+
+    if (fotherCart.childNodes.length > 0 && document.getElementById("msg_empty"))
+    {
+
+        fotherCart.parentNode.removeChild(document.getElementById("msg_empty"))
+
+    }
+    else if (fotherCart.childNodes.length === 0)
+    {
+
+        fotherCart.parentNode.appendChild(p)
 
     }
 
     return
 }
 
-
 // Funçõa responsavel por fexar a aba do carrinho ao clicar em outra função da pagina que não tenha relação direta com ela. 
 function CloseOpenBoxStore(open="") {
+    const cardContainer = document.querySelector(".cart_container")
 
-    if ((document.querySelector(".cart_container").classList.contains("hider_cart") || open==="open") && open!=="closed" ) 
+    if ((cardContainer.classList.contains("hider_cart") || open==="open") && open!=="closed" ) 
     {
 
-        document.querySelector(".cart_container").classList.remove("hider_cart")
+        cardContainer.classList.remove("hider_cart")
 
     }
     else 
     {
 
-        document.querySelector(".cart_container").classList.add("hider_cart")
+        cardContainer.classList.add("hider_cart")
 
     }
 
@@ -401,7 +452,7 @@ function CloseOpenBoxStore(open="") {
 
 
 // Função responsavel por deletar items ou conjunto adicionados ao carrinho.
-function deleteItem(fother) {
+function deleteItem() {
 
     document.querySelectorAll(".delete").forEach(deleta => {
 
@@ -414,8 +465,8 @@ function deleteItem(fother) {
 
                 document.getElementById("cart").removeChild(document.getElementById(`${idDeletar}`))
 
-                // A função inicia na linha 350!
-                countproductboy(fother)
+                // A função inicia na linha 359!
+                countproductboy()
 
             }
 
@@ -424,32 +475,50 @@ function deleteItem(fother) {
     })
 }
 
-
+// Função responsavel por criar as interções com o menu da versão mobile.
 const menubtn = document.getElementById("menubtn")
 
 menubtn.addEventListener("click", ()=>{
-    const srcMenu = menubtn.attributes.src.value.split("-")
-    const nav = document.querySelector(".menu")
-    const divMenu = document.createElement("div")
-    divMenu.setAttribute("class", "menu_container")
-    const fotherMenu = menubtn.parentNode
 
-    console.log(srcMenu[1][0]);
+    const srcMenu = menubtn.attributes.src.value.split("-")
+
+    const nav = document.querySelector(".menu")
+
+    const divMenu = document.createElement("div")
+
+    const divbackGround = document.createElement("div")
+
+
+    divbackGround.setAttribute("class", "div_ground_menu")
+
+    divMenu.setAttribute("class", "menu_container")
+
+    const fotherMenu = menubtn.parentNode
 
     if (srcMenu[1][0] === "m") 
     {
+
         fotherMenu.appendChild(divMenu)
+
+        fotherMenu.appendChild(divbackGround)
 
         nav.classList.add("open_display")
 
         menubtn.src=`${srcMenu[0]}-close.svg`
+
     }
     else
     {
+
         menubtn.src=`${srcMenu[0]}-menu.svg`
+
+        fotherMenu.removeChild(document.querySelector(".div_ground_menu"))
 
         nav.classList.remove("open_display")
 
         fotherMenu.removeChild(document.querySelector(".menu_container"))
+
     }
+
+    return
 })
