@@ -5,20 +5,30 @@
 <head>
 
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | E-commerce product page</title>
+
   <link rel="stylesheet" href="./css/index.css">
+
+  <link rel="stylesheet" href="./css/reponsive.css">
+
+  <title>Frontend Mentor | E-commerce product page</title>
 
 </head>
 
+
 <body>
+
 
   <header>
 
+    <img id="menubtn" class="menu_icon" src="./images/icon-menu.svg" alt="menu">
     <img class="logo" src="./images/logo.svg" alt="log">
 
     <nav class="menu">
+
       <li>
         <a href="#">Collections</a>
       </li>
@@ -38,6 +48,7 @@
       <li>
         <a href="#">Contact</a>
       </li>
+
     </nav>
 
     <div id="cart_boy_container" class="container_cart_box">
@@ -50,88 +61,130 @@
 
 
   <main>
+
     <div class="container_thumbnail_div_selected hider_div">
+      
       <svg id="close" class="closed" xmlns="http://www.w3.org/2000/svg">
         <path fill="#fff" d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" />
       </svg>
+
       <img class="product_img_selected" src="./images/image-product-1.jpg"  alt="product">
+
       <ul id="ul_div_thumb" class="container_thumbnail_img_selected">
+
         <li class="tumble_selected">
           <img src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
         </li>
+
         <li>
           <img src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
         </li>
+
         <li>
           <img src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
         </li>
+
         <li>
           <img src="./images/image-product-4-thumbnail.jpg" alt="picture tumble">
         </li>
+        
       </ul>
 
-    <div class="container_next_pre">
-      <svg class="preve" xmlns="http://www.w3.org/2000/svg">
-        <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill-rule="evenodd"/>
-      </svg>
-      <svg class="next" xmlns="http://www.w3.org/2000/svg">
-        <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill-rule="evenodd"/>
-      </svg>
-    </div>
+      <div class="container_next_pre">
+
+        <svg class="preve" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill-rule="evenodd"/>
+        </svg>
+
+        <svg class="next" xmlns="http://www.w3.org/2000/svg">
+          <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill-rule="evenodd"/>
+        </svg>
+
+      </div>
+
     </div>
 
-    <div class="card_container hider_cart">
+    <div class="cart_container hider_cart">
+
       <h2>card</h2>
-      <ul id="cart" class="card_select">
-      </ul>
+
+      <ul id="cart" class="cart_select"></ul>
+
       <button>Checkout</button>
+
     </div>
 
     <section class="container_img_production">
+
       <h2 class="title">Carts</h2>
+
       <img id="main_img" class="product_img" src="./images/image-product-1.jpg"  alt="product">
+
       <ul id="ul_thumb" class="container_thumbnail_img">
+
         <li class="tumble_selected">
           <img src="./images/image-product-1-thumbnail.jpg" alt="picture tumble">
         </li>
+
         <li>
           <img src="./images/image-product-2-thumbnail.jpg" alt="picture tumble">
         </li>
+
         <li>
           <img src="./images/image-product-3-thumbnail.jpg" alt="picture tumble">
         </li>
+
         <li>
           <img src="./images/image-product-4-thumbnail.jpg" alt="picture tumble">
         </li>
+
       </ul>
+
     </section>
 
+
     <section class="container_infor_production">
+
       <span class="subtitle">Sneaker Company</span>
+
       <h1 class="title_Infor_poduction">Fall Limited Edition Sneakers</h1>
+
       <p class="text_infor_production">
         These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.
       </p>
+
       <ul class="price_production">
+
         <li class="price_current">$125.00</li>
+
         <li class="discount">50%</li>
+
         <li class="price_old">$250.00</li>
+
       </ul>
+
       <div class="Add_production">
+
         <img class="Add_ninus minus_plus" src="./images/icon-minus.svg" alt="minus">
+
         <input id="input" class="input_Add" type="number" value="1" disabled >
+
         <img class="Add_plus minus_plus" src="./images/icon-plus.svg" alt="plus">
+
         <button id="submitbtn" class="boy_btn" type="submit">
           <img src="./images/icon-cart-white.svg" alt="card">
             Add to cart
         </button>
+
       </div>
+
     </section>
 
   </main>
 
 
   <script src="./js/index.js"></script>
+
 
 </body>
 
