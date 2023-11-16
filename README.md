@@ -4,9 +4,13 @@
 ![ecommerce](https://github.com/matheus369k/ecommerce-product-page-main/assets/47065962/48e02936-e3f2-4d72-b535-ed26efa9ff5c)</div>
 __Nota__: O Projeto foi atualizando tendo bug e adptação aprimorado, contendo novas funções sendo uma delas o slide da imagem do produto automatico, sendo atualizado a cada 10 segundos e algumas outra... A pagina representa um ecommerce de um produto de um loja web. 
 # 🧰Ferramentas
-- HTML
-- CSS
-- JavaScript
+- __HTML__
+  - *[Arquivo](./index.html)*
+- __CSS__
+  - *Main - [Arquivo](./css/.index.css)*
+  - *MediaQuery - [Arquivo](./css/responsive.css)*
+- __JavaScript__
+  - *[Arquivo](./js/index.js)*
 # ⚙️Desenvolvimento
 O projeto foi desenvolvido e responsivo, sendo moficado e adaptado a diferentes tipos de tela, fora utilizado   ```createElement(...)``` para adicionar elementos que inicial mente não precisão aparecer no site exemplos os item no container do cart ao adicionar item no carrinho tambem fora utilizado na criação da tela de confirmação de comprar...
 <div align="center">
