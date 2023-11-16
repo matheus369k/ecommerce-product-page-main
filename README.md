@@ -1,24 +1,21 @@
 # 💻Ecommerce Product Page Main
 <div align="center">
-
-![0](https://github.com/matheus369k/ecommerce-product-page-main/assets/47065962/75091777-7d6d-4c0c-9c5a-61366ec88730)</div>
-
-__📄Nota__: *O projeto tem como foco o desenvolvimeto de uma pagina web simulando uma aba de compra de um produto em um site de compras ficticio.*
-
-## 📋Linguagens
+  
+![ecommerce](https://github.com/matheus369k/ecommerce-product-page-main/assets/47065962/48e02936-e3f2-4d72-b535-ed26efa9ff5c)</div>
+__Nota__: O Projeto foi atualizando tendo bug e adptação aprimorado, contendo novas funções sendo uma delas o slide da imagem do produto automatico, sendo atualizado a cada 10 segundos e algumas outra... A pagina representa um ecommerce de um produto de um loja web. 
+# 🧰Ferramentas
 - HTML
 - CSS
 - JavaScript
-
-## 🧰Codigo
-No desenvolvimeto do projeto foi utilizado html5 css3 e javascript tendo sendo utilizado ```display: flex;``` para organizar os conteudos do site em linha e em coluna.
+# ⚙️Desenvolvimento
+O projeto foi desenvolvido e responsivo, sendo moficado e adaptado a diferentes tipos de tela, fora utilizado   ```createElement(...)``` para adicionar elementos que inicial mente não precisão aparecer no site exemplos os item no container do cart ao adicionar item no carrinho tambem fora utilizado na criação da tela de confirmação de comprar...
 <div align="center">
 
-![855](https://github.com/matheus369k/ecommerce-product-page-main/assets/47065962/4047fd55-b7b1-4538-b60f-772de32977ce)</div>
-Fora adicionado varias funções utilizando o js Dom para detectitar as tags a serem mudadas e logica de progamação utilizando o if para fazer verificação de estados atuais para mudar adequadamente. vejam algumas delas abaixo sendo executadas no site.
-<div align="center">
-
-![979](https://github.com/matheus369k/ecommerce-product-page-main/assets/47065962/d0bb60ba-41df-4318-b336-53b833f509c3)</div>
-
-## Licença
-Licença aderia ( MIT ) - veja [Licença](/Licence)
+![5574](https://github.com/matheus369k/ecommerce-product-page-main/assets/47065962/d61b497a-32c5-441a-a222-861ee127093a)</div>
+Na criação slide automático foi utilizado o ```setInterval(...)``` para charmar a função e atualiza a imagem e troca o style na thumb que indica onde esta atualmente a imagem em foco, podendo ser utilizada tambem como forma de troca-lá. Se quiser mais informações de cada função acesse o arquivo [index.js](./js/index.js) ele e o responsavel pelas funções da pagina....
+<div align+"center">
+  
+![div](https://github.com/matheus369k/ecommerce-product-page-main/assets/47065962/a7c092f5-e52f-4850-92d3-9acab399cf50)</div>
+o arquivo das funções da pagina tem uma breve descrição em cima de cade uma delas contendo o objetivo da mesma.
+# 📃Licença
+( MIT ) Acesse Aqui - [License](/LICENSE)
