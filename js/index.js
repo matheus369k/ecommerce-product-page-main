@@ -40,13 +40,13 @@ const ulDivThumb = document.getElementById("ul_div_thumb")
 const ulThumb = document.getElementById("ul_thumb")
 
 
-document.querySelector("#nex_pre_desktop").childNodes.forEach((btn, index) => {
+document.getElementById("nex_pre_desktop").childNodes.forEach((btn, index) => {
 
     // A função inicia na linha 71!
     SlideSwitch(btn, index)
 })
 
-document.querySelector("#nex_pre_mobile").childNodes.forEach((btn, index) => {
+document.getElementById("nex_pre_mobile").childNodes.forEach((btn, index) => {
 
     // A função inicia na linha 71!
     SlideSwitch(btn, index)
@@ -222,7 +222,7 @@ function AddStyleSwitchImgSeleceted(verification) {
 
             ulDivThumb.childNodes[index].classList.add("tumble_selected")
 
-            ulThumb.getElementById("ul_thumb").childNodes[index].classList.add("tumble_selected")
+            ulThumb.childNodes[index].classList.add("tumble_selected")
 
             imgMain.src = `./images/image-product-${thumbImg.childNodes[1].attributes.src.value.split("-")[2][0]}.jpg`
 
