@@ -40,13 +40,13 @@ const ulDivThumb = document.getElementById("ul_div_thumb")
 const ulThumb = document.getElementById("ul_thumb")
 
 
-document.querySelectorAll(".container_next_pre")[1].childNodes.forEach((btn, index) => {
+document.querySelector("#nex_pre_desktop").childNodes.forEach((btn, index) => {
 
     // A função inicia na linha 71!
     SlideSwitch(btn, index)
 })
 
-document.querySelectorAll(".container_next_pre")[0].childNodes.forEach((btn, index) => {
+document.querySelector("#nex_pre_mobile").childNodes.forEach((btn, index) => {
 
     // A função inicia na linha 71!
     SlideSwitch(btn, index)
