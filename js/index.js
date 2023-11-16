@@ -522,3 +522,31 @@ menubtn.addEventListener("click", ()=>{
 
     return
 })
+
+
+// codigo responsavel por criar criar a tela de confirmação
+document.getElementById("checkoutbtn").addEventListener("click", ()=>{
+
+    const divConfirmation = document.createElement("div")
+
+    divConfirmation.setAttribute("class", "div_confirmation")
+
+    const text_divConfirmation = document.createTextNode("Purchase Confirmed!!✔️")
+
+
+    const p_divConfirmation = document.createElement("p")
+
+    p_divConfirmation.appendChild(text_divConfirmation)
+
+    divConfirmation.appendChild(p_divConfirmation)
+
+    document.body.appendChild(divConfirmation)
+
+    setTimeout(()=>{
+
+        window.location.reload()
+
+    }, 5000)
+
+    return
+})
