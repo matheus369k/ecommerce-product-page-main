@@ -98,6 +98,31 @@
     }
 }
 
+@media (max-height: 668px) {
+    .product_img_selected {
+        height: 430px;
+        width: 450px;
+    }   
+
+    .closed {
+        margin-left: 420px;
+    }
+
+    .container_thumbnail_img_selected {
+        width: 400px;
+    }
+
+    .container_next_pre {
+        width: 484px;
+    }
+}
+
+@media (max-height: 568px) {
+    .container_thumbnail_div_selected {
+        display: none;
+    }
+}
+
 @media (max-width: 724px) {   
     header {
         width:100%;
